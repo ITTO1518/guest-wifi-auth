@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>Guest Wi-Fi Test</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Guest Wi-Fi</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <main class="card">
+    <h1>Guest Wi-Fi</h1>
 
-<h1>Guest Wi-Fi Test</h1>
+    <section id="codeArea">
+      <p class="desc">利用コードを入力してください。</p>
+      <input id="codeInput" type="text" placeholder="GWF-XXXXXX">
+      <button id="checkBtn">残り回数を確認</button>
+      <button id="startBtn">利用開始</button>
+    </section>
 
-<button onclick="runTest()">テスト実行</button>
+    <hr>
 
-<pre id="log"></pre>
+    <section id="registerArea">
+      <p class="desc">初めての方はメールアドレスで利用コードを発行してください。</p>
+      <input id="emailInput" type="email" placeholder="example@example.com">
+      <button id="registerBtn">利用コードを発行</button>
+    </section>
 
-<script src="app.js"></script>
+    <p id="message"></p>
 
+    <details>
+      <summary>デバッグログ</summary>
+      <pre id="debugLog"></pre>
+    </details>
+  </main>
+
+  <script src="app.js"></script>
 </body>
 </html>
